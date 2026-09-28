@@ -1,0 +1,1 @@
+{"name":"vida-plena-frontend","type":"module","scripts":{"dev":"vite --host 0.0.0.0","build":"tsc -b && vite build","test":"vitest run"},"dependencies":{"@vitejs/plugin-react":"latest","vite":"latest","typescript":"latest","react":"latest","react-dom":"latest","recharts":"^2.15.2"},"devDependencies":{"@types/react":"latest","@types/react-dom":"latest","vitest":"^3.1.1"}}

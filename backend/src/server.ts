@@ -1,0 +1,4 @@
+import 'dotenv/config'; import express from 'express'; import cors from 'cors'; import path from 'node:path'; import {connectDb} from './config/db.js'; import {router} from './routes/index.js'; import {Appointment} from './models/Appointment.js'; import {importData} from './services/importService.js';
+const app=express(); app.use(cors()); app.use(express.json()); app.use('/api',router); const port=Number(process.env.PORT??3000); await connectDb();
+if(await Appointment.countDocuments()===0){try{const dir=process.env.DATA_DIR??path.resolve('../data'); console.log('Base vazia: importando dados iniciais...'); console.log(await importData(path.join(dir,'agendamentos.csv'),path.join(dir,'medicos.json')));}catch(e){console.error('Importação inicial falhou:',e)}}
+app.listen(port,()=>console.log(`API em http://localhost:${port}`));
