@@ -1,4 +1,4 @@
-# Clínica Vida Plena — Desafio Técnico ACS
+# Clínica Vida Plena — Sistema de agendamentos
 
 Descrição: Sistema de agendamento, indicadores e prevenção de faltas. Backend em Node.js + TypeScript + Express + MongoDB/Mongoose; frontend em React + TypeScript + Vite + Recharts. Prioridade para **fila de confirmação priorizada por risco**, escolhida a partir dos dados históricos.
 
