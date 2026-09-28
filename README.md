@@ -44,7 +44,7 @@ cd ../frontend && npm test
 
 **Backend:** `express` para HTTP, `mongoose` para modelagem/índices MongoDB, `zod` para validar payloads, `csv-parse` para o legado CSV, `date-fns` + `date-fns-tz` para datas e `America/Sao_Paulo`, `vitest` para testes e `tsx` para executar TypeScript sem etapa manual no desenvolvimento.
 
-**Frontend:** React + Vite + TypeScript, `recharts` para gráficos e `vitest` para testes. Evitei Redux/TanStack Query porque o escopo atual não exige estado global complexo; `fetch` + estado local deixam o projeto mais fácil de avaliar.
+**Frontend:** React + Vite + TypeScript, `recharts` para gráficos e `vitest` para testes.`fetch` + estado local para deixar o projeto mais dinâmico na sua execução e avaliação.
 
 ## Decisões dos 5 pontos
 
