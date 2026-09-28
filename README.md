@@ -48,7 +48,7 @@ cd ../frontend && npm test
 
 ## Decisões dos 5 pontos
 
-1. Cancelamento com menos de 1 hora gera multa/penalidade, mas permanece `cancelada_paciente`.
+1. Cancelamento com menos de 1 hora gera penalidade por multa, mas permanece `cancelada_paciente`.
 2. Cancelamentos não entram na taxa: `falta / (falta + realizada)`.
 3. Primeira consulta = primeira vez do paciente na clínica.
 4. Duplicado: maior completude; empate: `data_agendamento` mais recente. Descartes têm motivo.
@@ -58,7 +58,7 @@ A justificativa completa está em [`DECISOES_DE_NEGOCIO.md`](./DECISOES_DE_NEGOC
 
 ## O que os dados mostraram
 
-Após deduplicação por ID, a base fica com **7.294 registros**. Entre desfechos `realizada` e `falta`, são **6.378 consultas**, **2.003 faltas** e taxa histórica de aproximadamente **31,4%**. A maior diferença observada está na antecedência: até 7 dias ~18%; 29–42 dias ~45%; 43+ dias ~46%. Primeira consulta (~37%), segunda-feira (~39%) e `MED01` (~40%) também aparecem como sinais úteis. Convênio e particular ficam próximos e, por isso, o tipo de atendimento não recebe peso forte.
+Após deduplicação por ID, a base fica com **7.294 registros**. Entre desfechos `realizada` e `falta`, são **6.378 consultas**, **2.003 faltas** e taxa histórica de aproximadamente **31%**. A maior diferença observada está na antecedência: até 7 dias ~18%; 29–42 dias ~45%; 43+ dias ~46%. Primeira consulta (~37%), segunda-feira (~39%) e `MED01` (~40%) também aparecem como sinais úteis. Convênio e particular ficam próximos e, por isso, o tipo de atendimento não recebe peso forte.
 
 Veja [`ANALISE_DADOS.md`](./ANALISE_DADOS.md) para a análise e a conta de impacto.
 
